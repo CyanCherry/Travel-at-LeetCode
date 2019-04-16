@@ -22,10 +22,10 @@ public class A_RemoveDuplicates {
 
     public static void main(String[] args) {
         int[] array = {1, 1, 2};
-        System.out.println((new Solution()).removeDuplicates(array));
+        System.out.println(new Solution().removeDuplicates(array));
         System.out.println(Arrays.toString(array));
         int[] array2 = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
-        System.out.println((new Solution()).removeDuplicates(array2));
+        System.out.println(new Solution().removeDuplicates(array2));
         System.out.println(Arrays.toString(array2));
     }
 }
