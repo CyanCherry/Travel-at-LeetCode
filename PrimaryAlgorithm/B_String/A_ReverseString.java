@@ -1,6 +1,6 @@
 package B_String;
 
-public class A_reverseString {
+public class A_ReverseString {
     static class Solution {
         static void reverseString(char[] s) {
             int maxIndex = s.length - 1;

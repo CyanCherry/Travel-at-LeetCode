@@ -1,6 +1,6 @@
 package A_Array;
 
-public class E_singleNumber {
+public class E_SingleNumber {
     static class Solution {
         int singleNumber(int[] nums) {
             int result = nums[0];

@@ -2,7 +2,7 @@ package A_Array;
 
 import java.util.Arrays;
 
-public class K_rotate {
+public class K_Rotate {
     static class Solution {
         static void rotate(int[][] matrix) {
             int length = matrix.length;

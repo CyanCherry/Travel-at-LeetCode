@@ -2,7 +2,7 @@ package A_Array;
 
 import java.util.Arrays;
 
-public class G_plusOne {
+public class G_PlusOne {
     static class Solution {
         static int[] plusOne(int[] digits) {
             digits[digits.length - 1]++;

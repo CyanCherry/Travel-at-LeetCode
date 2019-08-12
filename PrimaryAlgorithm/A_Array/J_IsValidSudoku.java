@@ -3,7 +3,7 @@ package A_Array;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class J_isValidSudoku {
+public class J_IsValidSudoku {
     static class Solution {
         static boolean isValidSudoku(char[][] board) {
             boolean[][] row = new boolean[9][9];

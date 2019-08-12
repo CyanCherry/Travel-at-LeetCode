@@ -2,7 +2,7 @@ package A_Array;
 
 import java.util.Arrays;
 
-public class H_moveZeroes {
+public class H_MoveZeroes {
     static class Solution {
         static void moveZeroes(int[] nums) {
             int notZeroNumber = 0;
