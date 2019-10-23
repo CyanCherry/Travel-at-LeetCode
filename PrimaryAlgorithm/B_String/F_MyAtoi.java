@@ -13,17 +13,20 @@ public class F_MyAtoi {
             StringBuilder resultBuilder = new StringBuilder();
             if (index < strArray.length && (strArray[index] == '-' || strArray[index] == '+')) {
                 isPositive = strArray[index] == '+';
-                resultBuilder.append(strArray[index]);
                 index++;
             }
+            while (index < strArray.length && strArray[index] == '0')
+                index++;
             while (index < strArray.length && strArray[index] > '/' && strArray[index] < ':') {
                 resultBuilder.append(strArray[index]);
                 isNumber = true;
                 index++;
+                if (resultBuilder.length() > 10)
+                    return isPositive ? Integer.MAX_VALUE : Integer.MIN_VALUE;
             }
             String resultStr = resultBuilder.toString();
             try {
-                result = Integer.parseInt(resultStr);
+                result = Integer.parseInt((isPositive ? "+" : "-") + resultStr);
             } catch (NumberFormatException exception) {
                 return isNumber ? isPositive ? Integer.MAX_VALUE : Integer.MIN_VALUE : 0;
             }
