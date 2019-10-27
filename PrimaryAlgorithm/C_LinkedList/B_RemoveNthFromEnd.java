@@ -3,15 +3,6 @@ package C_LinkedList;
 import java.util.Objects;
 
 public class B_RemoveNthFromEnd {
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     static class Solution {
         static ListNode removeNthFromEnd(ListNode head, int n) {
             ListNode currentNode = head;
@@ -45,16 +36,7 @@ public class B_RemoveNthFromEnd {
     }
 
     public static void main(String[] args) {
-        ListNode node1 = new ListNode(1);
-        ListNode node2 = new ListNode(2);
-        ListNode node3 = new ListNode(3);
-        ListNode node4 = new ListNode(4);
-        ListNode node5 = new ListNode(5);
-        node1.next = node2;
-        node2.next = node3;
-        node3.next = node4;
-        node4.next = node5;
-        node5.next = null;
+        ListNode node1 = ListNode.get12345List();
         ListNode head = Solution.removeNthFromEnd(node1, 2);
         assert head != null;
         assert head.next.next.val == 3;
