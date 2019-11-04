@@ -9,21 +9,11 @@ public class A_DeleteNode {
     }
 
     public static void main(String[] args) {
-        ListNode node4 = new ListNode(4);
-        ListNode node5 = new ListNode(5);
-        ListNode node1 = new ListNode(1);
-        ListNode node9 = new ListNode(9);
-        node4.next = node5;
-        node5.next = node1;
-        node1.next = node9;
-        node9.next = null;
-        Solution.deleteNode(node5);
-        assert node4.next.val == 1;
-        node4.next = node5;
-        node5.next = node1;
-        node1.next = node9;
-        node9.next = null;
-        Solution.deleteNode(node1);
-        assert node5.next.val == 9;
+        ListNode list = ListNode.linkedList(4, 5, 1, 9);
+        Solution.deleteNode(list.next);
+        ListNode.assertList(list, 4, 1, 9);
+        list = ListNode.linkedList(4, 5, 1, 9);
+        Solution.deleteNode(list.next.next);
+        ListNode.assertList(list, 4, 5, 9);
     }
 }

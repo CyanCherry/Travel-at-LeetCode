@@ -33,21 +33,10 @@ public class C_ReverseList {
     }
 
     public static void main(String[] args) {
-        ListNode node1 = ListNode.get12345List();
-        ListNode head = Solution.reverseList(node1);
-        assert54321(head);
+        ListNode list = ListNode.linkedList(1, 2, 3, 4, 5);
+        ListNode.assertList(Solution.reverseList(list), 5, 4, 3, 2, 1);
 
-        node1 = ListNode.get12345List();
-        head = Solution.reverseListRecursive(node1);
-        assert54321(head);
-    }
-
-    private static void assert54321(ListNode head) {
-        assert head.val == 5;
-        assert head.next.val == 4;
-        assert head.next.next.val == 3;
-        assert head.next.next.next.val == 2;
-        assert head.next.next.next.next.val == 1;
-        assert head.next.next.next.next.next == null;
+        list = ListNode.linkedList(1, 2, 3, 4, 5);
+        ListNode.assertList(Solution.reverseList(list), 5, 4, 3, 2, 1);
     }
 }

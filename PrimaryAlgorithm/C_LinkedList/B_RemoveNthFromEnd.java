@@ -36,17 +36,9 @@ public class B_RemoveNthFromEnd {
     }
 
     public static void main(String[] args) {
-        ListNode node1 = ListNode.get12345List();
-        ListNode head = Solution.removeNthFromEnd(node1, 2);
-        assert head != null;
-        assert head.next.next.val == 3;
-        head = Solution.removeNthFromEnd(node1, 1);
-        assert head != null;
-        assert head.next.next.val == 3;
-        assert head.next.next.next == null;
-        ListNode singleNode = new ListNode(1);
-        singleNode.next = null;
-        head = Solution.removeNthFromEnd(singleNode, 1);
-        assert head == null;
+        ListNode list = ListNode.linkedList(1, 2, 3, 4, 5);
+        ListNode.assertList(Solution.removeNthFromEnd(list, 2), 1, 2, 3, 5);
+        list = ListNode.linkedList(1);
+        ListNode.assertList(Solution.removeNthFromEnd(list, 1));
     }
 }

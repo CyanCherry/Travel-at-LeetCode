@@ -4,21 +4,40 @@ class ListNode {
     int val;
     ListNode next;
 
-    ListNode(int x) {
+    private ListNode(int x) {
         val = x;
     }
 
-    static ListNode get12345List(){
-        ListNode node1 = new ListNode(1);
-        ListNode node2 = new ListNode(2);
-        ListNode node3 = new ListNode(3);
-        ListNode node4 = new ListNode(4);
-        ListNode node5 = new ListNode(5);
-        node1.next = node2;
-        node2.next = node3;
-        node3.next = node4;
-        node4.next = node5;
-        node5.next = null;
-        return node1;
+    static ListNode linkedList(int... array) {
+        ListNode head = new ListNode(array[0]);
+        ListNode current = head;
+        for (int index = 1; index < array.length; index++) {
+            current.next = new ListNode(array[index]);
+            current = current.next;
+        }
+        current.next = null;
+        return head;
+    }
+
+    static void assertList(ListNode head, int... array) {
+        for (int item : array) {
+            assert head != null;
+            assert head.val == item;
+            head = head.next;
+        }
+        assert head == null;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder string = new StringBuilder();
+        string.append(this.val);
+        ListNode current = this.next;
+        while (current != null) {
+            string.append("->");
+            string.append(current.val);
+            current = current.next;
+        }
+        return string.toString();
     }
 }
