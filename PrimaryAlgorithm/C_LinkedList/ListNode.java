@@ -9,6 +9,8 @@ class ListNode {
     }
 
     static ListNode linkedList(int... array) {
+        if (array.length == 0)
+            return null;
         ListNode head = new ListNode(array[0]);
         ListNode current = head;
         for (int index = 1; index < array.length; index++) {
