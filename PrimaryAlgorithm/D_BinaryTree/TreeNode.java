@@ -18,25 +18,29 @@ class TreeNode {
         TreeNode treeNode = new TreeNode(nodeValues[0]);
         Queue<TreeNode> treeNodes = new LinkedList<>();
         treeNodes.add(treeNode);
-        for (int index = 1; index < nodeValues.length; index += 2) {
+        int index = 1;
+        for (; index + 1 < nodeValues.length; index += 2) {
             TreeNode current = treeNodes.remove();
             if (current == null) {
                 if (nodeValues[index] != null || nodeValues[index + 1] != null)
-                    throw new AssertionError("Expect null.");
+                    throw new AssertionError("Expect null as placeholder.");
                 treeNodes.add(null);
                 treeNodes.add(null);
             } else {
                 current.left = nodeValues[index] == null ? null : new TreeNode(nodeValues[index]);
-                current.right = index + 1 < nodeValues.length ?
-                        nodeValues[index + 1] == null ? null : new TreeNode(nodeValues[index + 1])
-                        : null;
+                current.right = nodeValues[index + 1] == null ? null : new TreeNode(nodeValues[index + 1]);
                 treeNodes.add(current.left);
                 treeNodes.add(current.right);
             }
         }
+        if (index < nodeValues.length) {
+            TreeNode current = treeNodes.remove();
+            current.left = nodeValues[index] == null ? null : new TreeNode(nodeValues[index + 1]);
+            current.right = null;
+        }
         while (!treeNodes.isEmpty()) {
             TreeNode current = treeNodes.remove();
-            if(current!=null){
+            if (current != null) {
                 current.left = null;
                 current.right = null;
             }
