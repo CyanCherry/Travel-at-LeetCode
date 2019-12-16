@@ -16,10 +16,8 @@ public class D_LevelOrder {
             if (result.size() <= level)
                 result.add(new LinkedList<>());
             result.get(level).add(treeNode.val);
-            if (treeNode.left != null)
-                levelTraversal(result, treeNode.left, level + 1);
-            if (treeNode.right != null)
-                levelTraversal(result, treeNode.right, level + 1);
+            levelTraversal(result, treeNode.left, level + 1);
+            levelTraversal(result, treeNode.right, level + 1);
         }
     }
 
