@@ -1,4 +1,4 @@
-package D_BinaryTree;
+package D_Trees;
 
 public class B_IsValidBST {
     static class Solution {

@@ -1,4 +1,4 @@
-package B_String;
+package B_Strings;
 
 public class I_LongestCommonPrefix {
     static class Solution {

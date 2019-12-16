@@ -1,4 +1,4 @@
-package B_String;
+package B_Strings;
 
 public class B_IntReverse {
     static class Solution {

@@ -1,4 +1,4 @@
-package D_BinaryTree;
+package D_Trees;
 
 import java.util.LinkedList;
 import java.util.Objects;

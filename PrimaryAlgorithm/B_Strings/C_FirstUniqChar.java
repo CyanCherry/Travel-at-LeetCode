@@ -1,6 +1,4 @@
-package B_String;
-
-import java.util.HashSet;
+package B_Strings;
 
 public class C_FirstUniqChar {
     static class Solution {
