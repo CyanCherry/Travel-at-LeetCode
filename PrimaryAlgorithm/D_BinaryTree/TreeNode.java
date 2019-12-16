@@ -1,6 +1,7 @@
 package D_BinaryTree;
 
 import java.util.LinkedList;
+import java.util.Objects;
 import java.util.Queue;
 
 class TreeNode {
@@ -8,8 +9,20 @@ class TreeNode {
     TreeNode left;
     TreeNode right;
 
-    private TreeNode(int x) {
+    TreeNode(int x) {
         val = x;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        TreeNode treeNode = (TreeNode) o;
+        return val == treeNode.val &&
+                Objects.equals(left, treeNode.left) &&
+                Objects.equals(right, treeNode.right);
     }
 
     static TreeNode Tree(Integer... nodeValues) {
@@ -35,7 +48,7 @@ class TreeNode {
         }
         if (index < nodeValues.length) {
             TreeNode current = treeNodes.remove();
-            current.left = nodeValues[index] == null ? null : new TreeNode(nodeValues[index + 1]);
+            current.left = nodeValues[index] == null ? null : new TreeNode(nodeValues[index]);
             current.right = null;
         }
         while (!treeNodes.isEmpty()) {
