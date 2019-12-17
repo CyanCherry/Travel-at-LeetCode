@@ -1,4 +1,4 @@
-package SortingAndSearching;
+package E_SortingAndSearching;
 
 public class B_FirstBadVersion {
     static class Solution extends VersionControl {
