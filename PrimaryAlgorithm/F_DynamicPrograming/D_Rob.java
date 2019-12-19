@@ -36,7 +36,7 @@ public class D_Rob {
                     results[index] = nums[index] + results[index - 2];
                 }
             }
-            System.out.println("results = " + Arrays.toString(results));
+
             return results[results.length - 1];
         }
     }
