@@ -26,6 +26,6 @@ public class B_CountPrimes {
         assert Solution.countPrimes(3) == 1;
         assert Solution.countPrimes(4) == 2;
         assert Solution.countPrimes(0) == 0;
-        System.out.println(Solution.countPrimes(1500000));
+        assert Solution.countPrimes(1500000) == 114155;
     }
 }
