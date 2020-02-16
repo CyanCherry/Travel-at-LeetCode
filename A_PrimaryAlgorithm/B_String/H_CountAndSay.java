@@ -1,4 +1,4 @@
-package B_Strings;
+package B_String;
 
 public class H_CountAndSay {
     static class Solution {

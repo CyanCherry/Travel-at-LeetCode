@@ -1,4 +1,4 @@
-package B_Strings;
+package B_String;
 
 public class G_StrStr {
     static class Solution {

@@ -1,4 +1,4 @@
-package B_Strings;
+package B_String;
 
 public class C_FirstUniqChar {
     static class Solution {

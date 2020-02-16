@@ -1,4 +1,4 @@
-package I_Others;
+package I_Other;
 
 public class F_MissingNumber {
     static class Solution {

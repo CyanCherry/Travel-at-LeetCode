@@ -1,4 +1,4 @@
-package D_Trees;
+package D_Tree;
 
 public class A_MaxDepth {
     static class Solution {

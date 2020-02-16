@@ -1,4 +1,4 @@
-package I_Others;
+package I_Other;
 
 public class A_HammingWeight {
     static class Solution {

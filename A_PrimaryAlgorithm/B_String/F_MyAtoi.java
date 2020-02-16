@@ -1,4 +1,4 @@
-package B_Strings;
+package B_String;
 
 public class F_MyAtoi {
     static class Solution {

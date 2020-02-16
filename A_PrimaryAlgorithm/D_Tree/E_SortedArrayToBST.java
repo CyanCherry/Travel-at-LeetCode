@@ -1,4 +1,4 @@
-package D_Trees;
+package D_Tree;
 
 import java.util.Objects;
 

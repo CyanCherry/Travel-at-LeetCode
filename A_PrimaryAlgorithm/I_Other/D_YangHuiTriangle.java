@@ -1,4 +1,4 @@
-package I_Others;
+package I_Other;
 
 import java.util.Arrays;
 import java.util.LinkedList;
