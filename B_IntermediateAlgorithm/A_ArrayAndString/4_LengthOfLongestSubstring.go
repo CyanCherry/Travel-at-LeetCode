@@ -1,0 +1,31 @@
+package main
+
+func lengthOfLongestSubstring(s string) int {
+	if len(s) == 0 {
+		return 0
+	}
+	charCount := [256]int{}
+	startIndex := 0
+	maxLen := 1
+	for endIndex := 0; endIndex < len(s); endIndex++ {
+		charCount[s[endIndex]]++
+		for charCount[s[endIndex]] > 1 {
+			charCount[s[startIndex]]--
+			startIndex++
+		}
+		currentLen := endIndex - startIndex + 1
+		if currentLen > maxLen {
+			maxLen = currentLen
+		}
+	}
+	return maxLen
+}
+
+func main() {
+	println(3 == lengthOfLongestSubstring("abcabcbb"))
+	println(1 == lengthOfLongestSubstring("bbbbb"))
+	println(3 == lengthOfLongestSubstring("pwwkew"))
+	println(2 == lengthOfLongestSubstring("aab"))
+	println(3 == lengthOfLongestSubstring("dvdf"))
+	println(0 == lengthOfLongestSubstring(""))
+}
