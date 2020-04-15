@@ -26,6 +26,6 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 }
 
 func main() {
-	println(ListToInt(addTwoNumbers(ListFromInt(342), ListFromInt(465))) == 807)
-	println(ListToInt(addTwoNumbers(ListFromInt(5), ListFromInt(5))) == 10)
+	println(addTwoNumbers(ListFromInt(342), ListFromInt(465)).ToInt() == 807)
+	println(addTwoNumbers(ListFromInt(5), ListFromInt(5)).ToInt() == 10)
 }
