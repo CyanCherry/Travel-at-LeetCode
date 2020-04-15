@@ -7,6 +7,23 @@ type ListNode struct {
 	Next *ListNode
 }
 
+func ListFromDigits(digits ...int) *ListNode {
+	if len(digits) == 0 {
+		return nil
+	}
+	head := &ListNode{
+		Val: digits[0],
+	}
+	current := head
+	for _, digit := range digits[1:] {
+		current.Next = &ListNode{
+			Val: digit,
+		}
+		current = current.Next
+	}
+	return head
+}
+
 func (node ListNode) String() string {
 	if node.Next == nil {
 		return strconv.FormatInt(int64(node.Val), 10) + " => NULL"
@@ -16,22 +33,19 @@ func (node ListNode) String() string {
 }
 
 func ListFromInt(integer int) *ListNode {
-	currentNode := &ListNode{
+	head := &ListNode{
 		Val:  integer % 10,
 		Next: nil,
 	}
-	headNode := currentNode
-	integer /= 10
-	for integer > 0 {
-		newNode := &ListNode{
+	current := head
+	for integer /= 10; integer > 0; integer /= 10 {
+		current.Next = &ListNode{
 			Val:  integer % 10,
 			Next: nil,
 		}
-		currentNode.Next = newNode
-		currentNode = newNode
-		integer /= 10
+		current = current.Next
 	}
-	return headNode
+	return head
 }
 
 func (node *ListNode) ToInt() int {
