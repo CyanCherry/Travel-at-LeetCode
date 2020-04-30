@@ -7,9 +7,9 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func ListFromDigits(digits ...int) *ListNode {
+func ListFromDigitsWithSuffix(ending *ListNode, digits ...int) *ListNode {
 	if len(digits) == 0 {
-		return nil
+		return ending
 	}
 	head := &ListNode{
 		Val: digits[0],
@@ -21,6 +21,7 @@ func ListFromDigits(digits ...int) *ListNode {
 		}
 		current = current.Next
 	}
+	current.Next = ending
 	return head
 }
 
@@ -58,4 +59,8 @@ func (node *ListNode) ToInt() int {
 		current = current.Next
 	}
 	return integer
+}
+
+func ListFromDigits(digits ...int) *ListNode {
+	return ListFromDigitsWithSuffix(nil, digits...)
 }
