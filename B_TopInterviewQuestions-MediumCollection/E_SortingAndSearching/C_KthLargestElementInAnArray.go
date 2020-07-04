@@ -6,6 +6,7 @@ import (
 )
 
 func findKthLargest(nums []int, k int) int {
+    rand.Seed(time.Now().UnixNano())
     quickSort(nums, 0, len(nums), k)
     return nums[k-1]
 }
@@ -22,7 +23,6 @@ func quickSort(nums []int, start, end, k int) {
         return
     }
     pivot := start + rand.Intn(end-start)
-    rand.Seed(time.Now().UnixNano())
     pv := nums[pivot]
     nums[pivot], nums[start] = nums[start], nums[pivot]
     i, j := start, end-1
