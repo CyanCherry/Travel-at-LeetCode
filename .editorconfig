@@ -1,7 +1,14 @@
 root = true
 
-[*.{java, go, kt}]
+[*.*]
 end_of_line = lf
-indent_style = space
-indent_size = 4
 charset = utf-8
+
+[*.{java, go}]
+indent_size = 4
+
+[*.java]
+indent_style = space
+
+[*.go]
+indent_style = tab
