@@ -1,0 +1,11 @@
+[package]
+name = "C_TopInterviewQuestions-HardCollection"
+version = "0.1.0"
+authors = ["Cyan Cherry <cyan_cherry@qq.com>"]
+edition = "2018"
+
+[dependencies]
+
+[[bin]]
+name = "traval_at_leetcode"
+path = "main.rs"
