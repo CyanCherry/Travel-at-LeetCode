@@ -13,7 +13,6 @@ impl Solution {
                 *count += 1
             }
         }
-        println!("{:?}", map);
         for k in 0..nums3.len() {
             for l in 0..nums4.len() {
                 let sum = nums3[k] + nums4[l];
@@ -21,7 +20,6 @@ impl Solution {
                 result += count.unwrap_or(&0)
             }
         }
-        println!("{}", result);
         return result;
     }
 }
