@@ -3,6 +3,7 @@ mod b_spiral_matrix;
 mod c_4sum_ii;
 mod d_container_with_most_water;
 mod e_game_of_life;
+mod f_first_missing_positive;
 
 pub fn test() {
     a_product_of_array_except_self::test();
@@ -10,4 +11,5 @@ pub fn test() {
     c_4sum_ii::test();
     d_container_with_most_water::test();
     e_game_of_life::test();
+    f_first_missing_positive::test();
 }
