@@ -26,6 +26,7 @@ impl Solution {
 }
 
 pub fn test() {
+    println!("max_area");
     println!("{}", Solution::max_area(vec![1, 1]) == 1);
     println!("{}", Solution::max_area(vec![4, 3, 2, 1, 4]) == 16);
     println!("{}", Solution::max_area(vec![1, 2, 1]) == 2);

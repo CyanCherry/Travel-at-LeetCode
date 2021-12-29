@@ -18,5 +18,6 @@ impl Solution {
 }
 
 pub fn test() {
+    println!("product_except_self");
     println!("{}", [24, 12, 8, 6].to_vec() == Solution::product_except_self([1, 2, 3, 4].to_vec()))
 }

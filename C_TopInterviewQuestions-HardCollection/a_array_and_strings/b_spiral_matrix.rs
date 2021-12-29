@@ -48,6 +48,7 @@ impl Solution {
 }
 
 pub fn test() {
+    println!("spiral_order");
     println!("{}", Solution::spiral_order(vec![
         vec![1, 2, 3],
         vec![4, 5, 6],

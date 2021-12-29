@@ -25,6 +25,7 @@ impl Solution {
 }
 
 pub fn test() {
+    println!("four_sum_count");
     println!("{}", Solution::four_sum_count(
         vec![1, 2],
         vec![-2, -1],
