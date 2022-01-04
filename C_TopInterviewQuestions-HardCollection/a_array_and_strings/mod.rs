@@ -5,6 +5,7 @@ mod d_container_with_most_water;
 mod e_game_of_life;
 mod f_first_missing_positive;
 mod g_longest_consecutive_sequence;
+mod h_find_the_duplicate_number;
 
 pub fn test() {
     a_product_of_array_except_self::test();
@@ -14,4 +15,5 @@ pub fn test() {
     e_game_of_life::test();
     f_first_missing_positive::test();
     g_longest_consecutive_sequence::test();
+    h_find_the_duplicate_number::test();
 }
