@@ -20,8 +20,7 @@ impl Solution {
     }
 }
 
-pub fn test() {
-    print!("first_missing_positive");
+fn main() {
     println!("{}", 3 == Solution::first_missing_positive(vec![1, 2, 0]));
     println!("{}", 2 == Solution::first_missing_positive(vec![3, 4, -1, 1]));
     println!("{}", 1 == Solution::first_missing_positive(vec![7, 8, 9, 11, 12]));

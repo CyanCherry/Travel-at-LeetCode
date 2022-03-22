@@ -29,3 +29,7 @@ out/
 
 # rustc build result
 target/
+
+# cargo
+Cargo.toml
+Cargo.lock

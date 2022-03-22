@@ -54,8 +54,7 @@ impl Solution {
     }
 }
 
-pub fn test() {
-    println!("longest_consecutive_sequence");
+fn main() {
     println!("{}", 4 == Solution::longest_consecutive(vec![100, 4, 200, 1, 3, 2]));
     println!("{}", 9 == Solution::longest_consecutive(vec![0, 3, 7, 2, 5, 8, 4, 6, 0, 1]));
     println!("{}", 4 == Solution::longest_consecutive(vec![-7, -1, 3, -9, -4, 7, -3, 2, 4, 9, 4, -9, 8, -7, 5, -1, -7]));

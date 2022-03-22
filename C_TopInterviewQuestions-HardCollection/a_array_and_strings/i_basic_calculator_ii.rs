@@ -53,8 +53,7 @@ impl Solution {
     }
 }
 
-pub fn test() {
-    println!("basic_calculator_ii");
+fn main() {
     println!("{}", 7 == Solution::calculate(String::from("3+2*2")));
     println!("{}", 1 == Solution::calculate(String::from(" 3/2 ")));
     println!("{}", 5 == Solution::calculate(String::from(" 3+5 / 2 ")));

@@ -102,8 +102,7 @@ impl Solution {
     }
 }
 
-pub fn test() {
-    println!("game_of_life");
+fn main() {
     let mut board = vec![
         vec![0, 1, 0],
         vec![0, 0, 1],
