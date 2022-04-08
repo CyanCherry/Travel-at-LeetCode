@@ -17,19 +17,20 @@ function fourSumCount(nums1: number[], nums2: number[], nums3: number[], nums4: 
   return result;
 }
 
-
 console.log(fourSumCount(
   [1, 2],
   [-2, -1],
   [-1, 2],
   [0, 2],
 ) == 2);
+
 console.log(fourSumCount(
   [0],
   [0],
   [0],
   [0],
 ) == 1);
+
 console.log(fourSumCount(
   [-1, 1, 1, 1, -1],
   [0, -1, -1, 0, 1],
