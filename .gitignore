@@ -33,3 +33,5 @@ target/
 # cargo
 Cargo.toml
 Cargo.lock
+
+.DS_Store
