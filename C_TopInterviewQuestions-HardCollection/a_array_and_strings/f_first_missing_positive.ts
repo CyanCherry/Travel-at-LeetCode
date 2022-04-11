@@ -1,19 +1,19 @@
 function firstMissingPositive(nums: number[]): number {
-  const exist_flags = new Array(nums.length + 1).fill(false)
-  let first_missing_positive = 1
-  find: for (let i = 0; i < nums.length; i++) {
-    const num = nums[i]
-    if (0 < num && num <= nums.length) {
-      exist_flags[num] = true
-      while (exist_flags[first_missing_positive]) {
-        first_missing_positive += 1
-        if (first_missing_positive == exist_flags.length) {
-          break find
+    const exist_flags = new Array(nums.length + 1).fill(false)
+    let first_missing_positive = 1
+    find: for (let i = 0; i < nums.length; i++) {
+        const num = nums[i]
+        if (0 < num && num <= nums.length) {
+            exist_flags[num] = true
+            while (exist_flags[first_missing_positive]) {
+                first_missing_positive += 1
+                if (first_missing_positive == exist_flags.length) {
+                    break find
+                }
+            }
         }
-      }
     }
-  }
-  return first_missing_positive
+    return first_missing_positive
 }
 
 
