@@ -97,7 +97,7 @@ class BHeap<T> {
                 this.#map.delete(elem)
                 if (index != lastIndex) {
                     this.#tidyUp(index)
-                    this.#tidyDown(this.#map.get(lastElem!)!)
+                    this.#tidyDown(index)
                 }
             }
         }
