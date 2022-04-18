@@ -20,7 +20,11 @@ function sortList(head: ListNode | null): ListNode | null {
         const halfLen = ~~(length / 2)
         let current: ListNode | null = head
         let index = 1
+        let needSort = false
         while (index < halfLen) {
+            if (!needSort && current!.val > current!.next!.val) {
+                needSort = true
+            }
             index++
             current = current!.next
         }
@@ -28,7 +32,9 @@ function sortList(head: ListNode | null): ListNode | null {
         // divide the list into two halves and sort each half
         let halfHead = current!.next
         current!.next = null
-        head = sort(head, halfLen)
+        if (needSort) {
+            head = sort(head, halfLen)
+        }
         halfHead = sort(halfHead!, length - halfLen)
 
         // merge the two sorted halves
