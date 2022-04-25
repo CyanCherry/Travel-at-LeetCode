@@ -20,3 +20,4 @@ ij_typescript_use_semicolon_after_statement = false
 ij_typescript_force_semicolon_style = true
 ij_typescript_use_double_quotes = true
 ij_typescript_force_quote_style = true
+ij_typescript_enforce_trailing_comma = whenmultiline
