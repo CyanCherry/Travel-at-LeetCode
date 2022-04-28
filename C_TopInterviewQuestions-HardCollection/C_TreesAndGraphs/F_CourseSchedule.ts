@@ -5,7 +5,7 @@ function canFinish(numCourses: number, prerequisites: number[][]): boolean {
         if (prerequisites[i].length !== 2) {
             return false
         }
-        const [from, to] = prerequisites[i]
+        const [to, from] = prerequisites[i]
         if (from < numCourses && to < numCourses && from != to) {
             inCount[to]++
         } else {
@@ -15,7 +15,7 @@ function canFinish(numCourses: number, prerequisites: number[][]): boolean {
     while (prerequisiteSet.size) {
         let isProgressed = false
         prerequisiteSet.forEach((p) => {
-            const [from, to] = p
+            const [to, from] = p
             if (inCount[from] == 0) {
                 inCount[to]--
                 prerequisiteSet.delete(p)
