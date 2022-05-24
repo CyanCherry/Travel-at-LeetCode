@@ -62,11 +62,11 @@ function partition(s: string): string[][] {
     return results
 }
 
-console.log(MyArrays.matrixEquals(
+console.log(MyArrays.equals(
     [["a", "a", "b"], ["aa", "b"]],
     partition("aab"),
 ))
-console.log(MyArrays.matrixEquals(
+console.log(MyArrays.equals(
     [["a"]],
     partition("a"),
 ))

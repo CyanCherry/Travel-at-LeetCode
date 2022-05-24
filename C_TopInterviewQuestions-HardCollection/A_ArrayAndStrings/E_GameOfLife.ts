@@ -107,7 +107,7 @@ const board1 = [
     [0, 0, 0],
 ]
 gameOfLife(board1)
-console.log(MyArrays.matrixEquals(board1, [
+console.log(MyArrays.equals(board1, [
     [0, 0, 0],
     [1, 0, 1],
     [0, 1, 1],
@@ -119,7 +119,7 @@ const board2 = [
     [1, 0],
 ]
 gameOfLife(board2)
-console.log(MyArrays.matrixEquals(board2, [
+console.log(MyArrays.equals(board2, [
     [1, 1],
     [1, 1],
 ]))
@@ -128,6 +128,6 @@ const board3 = [
     [0],
 ]
 gameOfLife(board3)
-console.log(MyArrays.matrixEquals(board3, [
+console.log(MyArrays.equals(board3, [
     [0],
 ]))

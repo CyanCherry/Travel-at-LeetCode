@@ -58,7 +58,7 @@ const test1 = [
     ["X", "O", "X", "X"],
 ]
 solve(test1)
-console.log(MyArrays.matrixEquals(test1, [
+console.log(MyArrays.equals(test1, [
     ["X", "X", "X", "X"],
     ["X", "X", "X", "X"],
     ["X", "X", "X", "X"],
@@ -67,7 +67,7 @@ console.log(MyArrays.matrixEquals(test1, [
 
 const test2 = [["X"]]
 solve(test2)
-console.log(MyArrays.matrixEquals(test2, [["X"]]))
+console.log(MyArrays.equals(test2, [["X"]]))
 
 const test3 = [
     ["X", "O", "X", "O", "X", "O"],
@@ -76,7 +76,7 @@ const test3 = [
     ["O", "X", "O", "X", "O", "X"],
 ]
 solve(test3)
-console.log(MyArrays.matrixEquals(test3, [
+console.log(MyArrays.equals(test3, [
     ["X", "O", "X", "O", "X", "O"],
     ["O", "X", "X", "X", "X", "X"],
     ["X", "X", "X", "X", "X", "O"],
