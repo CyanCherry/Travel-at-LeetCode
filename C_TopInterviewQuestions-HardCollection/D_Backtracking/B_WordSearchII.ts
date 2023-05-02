@@ -1,9 +1,9 @@
 import { MyArrays } from "../lib.ts"
 
-type DicTreeNode = { word: string | null, tree: DicTree }
+type TrieNode = { word: string | null, tree: Trie }
 
-class DicTree {
-    children: Map<string, DicTreeNode>
+class Trie {
+    children: Map<string, TrieNode>
 
     constructor() {
         this.children = new Map()
@@ -16,17 +16,17 @@ class DicTree {
         let node = this.children.get(s[0])
         if (!node) {
             node = {
-                tree: new DicTree(),
+                tree: new Trie(),
                 word: null,
             }
             this.children.set(s[0], node)
         }
         for (let i = 1; i < s.length; i++) {
-            const tree: DicTree = node!.tree!
+            const tree: Trie = node!.tree!
             const char = s[i]
             if (!(tree.children.has(char))) {
                 tree.children.set(char, {
-                    tree: new DicTree(),
+                    tree: new Trie(),
                     word: null,
                 })
             }
@@ -36,7 +36,7 @@ class DicTree {
     }
 
     static fromStrings(ss: string[]) {
-        const tree = new DicTree()
+        const tree = new Trie()
         ss.forEach(s => {
             tree.addString(s)
         })
@@ -45,10 +45,10 @@ class DicTree {
 }
 
 function findWords(board: string[][], words: string[]): string[] {
-    const dicTree = DicTree.fromStrings(words)
+    const dicTree = Trie.fromStrings(words)
     const result: string[] = []
 
-    function search(node: DicTreeNode | undefined, r: number, c: number) {
+    function search(node: TrieNode | undefined, r: number, c: number) {
         if (node === undefined) {
             return
         }
