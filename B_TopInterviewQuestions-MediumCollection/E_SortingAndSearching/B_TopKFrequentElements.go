@@ -64,7 +64,7 @@ func (h *MaxCountHeap) remove() numCounter {
 	return nc
 }
 
-func (h MaxCountHeap) getNums(count int) []int {
+func (h *MaxCountHeap) getNums(count int) []int {
 	r := make([]int, count)
 	for i := 0; i < count; i++ {
 		r[i] = h.remove().Num
