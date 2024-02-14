@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 	"sort"
 )
 
@@ -94,7 +95,9 @@ func verticalTraversal(root *TreeNode) [][]int {
 }
 
 func main() {
-	fmt.Println(verticalTraversal(&TreeNode{
+	fmt.Println(reflect.DeepEqual([][]int{
+		{9}, {3, 15}, {20}, {7},
+	}, verticalTraversal(&TreeNode{
 		Val: 3,
 		Left: &TreeNode{
 			Val:   9,
@@ -114,8 +117,10 @@ func main() {
 				Right: nil,
 			},
 		},
-	}))
-	fmt.Println(verticalTraversal(&TreeNode{
+	})))
+	fmt.Println(reflect.DeepEqual([][]int{
+		{4}, {2}, {1, 5, 6}, {3}, {7},
+	}, verticalTraversal(&TreeNode{
 		Val: 1,
 		Left: &TreeNode{
 			Val: 2,
@@ -143,8 +148,10 @@ func main() {
 				Right: nil,
 			},
 		},
-	}))
-	fmt.Println(verticalTraversal(&TreeNode{
+	})))
+	fmt.Println(reflect.DeepEqual([][]int{
+		{4}, {2}, {1, 5, 6}, {3}, {7},
+	}, verticalTraversal(&TreeNode{
 		Val: 1,
 		Left: &TreeNode{
 			Val: 2,
@@ -172,5 +179,5 @@ func main() {
 				Right: nil,
 			},
 		},
-	}))
+	})))
 }
